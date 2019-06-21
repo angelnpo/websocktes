@@ -32,7 +32,7 @@ public class MySocketWeb {
 		System.out.println("onMessage::From=" + session.getId() + " Message=" + message);
 
 		try {
-			session.getBasicRemote().sendText("Hello " + message + ", " + session.getId());
+			session.getBasicRemote().sendText("Hello " + message + ", sessionId: " + session.getId());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -21,9 +21,9 @@ class WebSocketClient{
 				console.log('onopen::' + JSON.stringify(event, null, 4));
 			}			
 			this.webSocket.onmessage = (event)=>{
-				let echoText = document.getElementById("echoText");
+				let echoText = document.getElementById("messageIn");
 				let msg = event.data;
-				echoText.value += "Message received from to the server : " + msg;
+				echoText.innerHTML = "Message received from to the server : " + msg;
                 //console.log('onmessage::' + JSON.stringify(msg, null, 4));
 			}
 			this.webSocket.onclose = function(event) {
